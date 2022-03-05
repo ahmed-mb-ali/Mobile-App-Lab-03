@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exercise_01">
+
+    <TextView
+        android:id="@+id/tvLineThicknses"
+        android:layout_width="139dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="Line thickness"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvLineColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvLineColor"
+        android:layout_width="109dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:text="Line Color"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toStartOf="@+id/tvArrowKeys"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <TextView
+        android:id="@+id/tvArrowKeys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        android:text="Arrow Keys"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="99dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="512dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/Red"
+            android:layout_width="98dp"
+            android:layout_height="30dp"
+            android:buttonTint="@color/red"
+            android:text="Red" />
+
+        <RadioButton
+            android:id="@+id/Yellow"
+            android:layout_width="98dp"
+            android:layout_height="30sp"
+            android:buttonTint="@color/yellow"
+            android:text="Yellow" />
+
+        <RadioButton
+            android:id="@+id/Cyan"
+            android:layout_width="98dp"
+            android:layout_height="30dp"
+            android:buttonTint="@color/cyan"
+            android:text="Cyan" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/ImageViewForDrawing"
+        android:layout_width="297dp"
+        android:layout_height="331dp"
+        android:layout_margin="20px"
+        android:layout_marginBottom="80dp"
+        android:minWidth="300px"
+        android:minHeight="300px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.387"></ImageView>
+
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="142dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        android:onClick="clearCanvas"
+        android:text="CLEAR CANBAS"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageButton
+        android:id="@+id/buttonDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="buttonDown"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:srcCompat="@drawable/down" />
+
+    <ImageButton
+        android:id="@+id/buttonUp"
+        android:layout_width="63dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
+        android:onClick="buttonUp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLeft"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRight"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toEndOf="@+id/buttonLeft"
+        app:layout_constraintTop_toBottomOf="@+id/tvArrowKeys"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/up" />
+
+    <ImageButton
+        android:id="@+id/buttonLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="buttonLeft"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:srcCompat="@drawable/left" />
+
+    <ImageButton
+        android:id="@+id/buttonRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="buttonRight"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/right" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupLine"
+        android:layout_width="68dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/LineThick60"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:text="60"
+            android:textStyle="bold"
+            android:buttonTint="@color/black" />
+
+        <RadioButton
+            android:id="@+id/LineThick80"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="80"
+            android:textStyle="bold"
+            android:buttonTint="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/LineThick100"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="100"
+            android:textStyle="bold"
+            android:buttonTint="@color/black"/>
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

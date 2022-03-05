@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ahmedali_COMP304Sec003_Lab3</string>
+
+
+    <string name="title_name">\ Select exercise to demonstrate:</string>
+
+
+    <string-array name="exercises">
+
+        <item>Exercise 1</item>
+        <item>Exercise 2</item>
+        <item>Exercise 3</item>
+
+    </string-array>
+
+
+</resources>
